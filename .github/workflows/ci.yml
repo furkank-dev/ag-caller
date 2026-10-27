@@ -1,0 +1,9 @@
+name: ci
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  call-callee:
+    # Cross-repo reusable workflow, mutable ref (@main) - ActionGap ground truth
+    uses: furkank-dev/ag-callee/.github/workflows/reusable.yml@main
